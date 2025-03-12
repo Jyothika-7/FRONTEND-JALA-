@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Font Styling Example</title>
+    <style>
+        
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        
+        .heading {
+            font-size: 36px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-weight: bold;
+            color: darkblue;
+            text-align: center;
+        }
+
+        
+        .paragraph {
+            font-size: 18px;
+            font-family: 'Verdana', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            color: darkgreen;
+            text-align: justify;
+            margin: 20px auto;
+            width: 60%;
+        }
+
+       
+        .special-text {
+            font-size: 22px;
+            font-family: 'Courier New', monospace;
+            font-style: oblique;
+            font-weight: bold;
+            color: darkred;
+            text-align: right;
+            margin-right: 20%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="heading">Font Styling Example</h1>
+
+    <p class="paragraph">
+        This paragraph uses a different font family, text color, and is justified for a clean look. 
+        Experiment with font-size, color, and alignment to make text more readable.
+    </p>
+
+    <p class="special-text">
+        This text is right-aligned with a different font style and color.
+    </p>
+
+</body>
+</html>
