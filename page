@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Different Borders Example</title>
+    <style>
+       
+        .box {
+            width: 300px;
+            height: 150px;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 150px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            
+            
+            border-top: 5px dashed red;     
+            border-right: 8px solid blue;   
+            border-bottom: 6px double green; 
+            border-left: 4px dotted purple;  
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        Different Borders Example
+    </div>
+
+</body>
+</html>
