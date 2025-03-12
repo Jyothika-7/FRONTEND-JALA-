@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Height & Width Example</title>
+    <style>
+        
+        .container {
+            width: 80%; 
+            height: 400px; 
+            margin: 20px auto;
+            background-color: lightgray;
+            text-align: center;
+            padding: 20px;
+        }
+
+       
+        .box1 {
+            width: 200px; 
+            height: 100px; 
+            background-color: lightblue;
+            line-height: 100px;
+            margin: 10px auto;
+            border: 2px solid blue;
+        }
+
+        
+        .box2 {
+            width: 50%;
+            height: 50%; 
+            background-color: lightgreen;
+            line-height: 200px;
+            margin: 10px auto;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Element Width & Height</h2>
+
+        <div class="box1">200px × 100px</div>
+
+        <div class="box2">50% × 50%</div>
+    </div>
+
+</body>
+</html>
