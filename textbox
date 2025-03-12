@@ -1,0 +1,34 @@
+# FRONTEND-JALA-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Expression Evaluator</title>
+</head>
+<body>
+
+    <textarea id="box" oninput="update()"></textarea>
+    <p id="output"></p>
+
+    <script>
+        function update() {
+            let box = document.getElementById("box");
+            let text = box.value;
+
+            
+            text = text.replace(/\{\{(.*?)\}\}/g, (match, exp) => eval(exp.trim()));
+
+            document.getElementById("output").innerText = text;
+
+            
+            box.style.backgroundColor = isColor(box.value) ? box.value : "white";
+        }
+
+        function isColor(value) {
+            let s = new Option().style;
+            s.color = value;
+            return s.color !== '';
+        }
+    </script>
+
+</body>
+</html>
