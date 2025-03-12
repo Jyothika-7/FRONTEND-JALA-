@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS $scope vs $rootScope</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="FirstController">
+        <h2>First Controller</h2>
+        <p>Local Message: {{ message }}</p>
+        <p>Global Message: {{ globalMessage }}</p>
+    </div>
+
+    <div ng-controller="SecondController">
+        <h2>Second Controller</h2>
+        <p>Local Message: {{ message }}</p>
+        <p>Global Message: {{ globalMessage }}</p>
+        <button ng-click="changeGlobal()">Change Global Message</button>
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+
+        
+        app.run(function($rootScope) {
+            $rootScope.globalMessage = "Hello from $rootScope!";
+        });
+
+        
+        app.controller("FirstController", function($scope) {
+            $scope.message = "Hello from First Controller!";
+        });
+
+        
+        app.controller("SecondController", function($scope, $rootScope) {
+            $scope.message = "Hello from Second Controller!";
+            
+            $scope.changeGlobal = function() {
+                $rootScope.globalMessage = "Global message updated!";
+            };
+        });
+    </script>
+
+</body>
+</html>
